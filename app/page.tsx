@@ -1,65 +1,241 @@
-import Image from "next/image";
+"use client"
+// import Greetings from "../component/Greetings";
+// import Add from "../component/Add";
 
-export default function Home() {
+// const App = () => {
+//   return (
+//     <>
+//      <div>Greetings</div>
+//      <div>Add</div>
+//     </>
+//   );
+// };
+
+// export default App;
+// Example 1
+// const App = () => {
+//   const numbers = [1, 2, 3, 4, 5,6,7,8,9,10];
+
+//   return (
+//     <main>
+//       {numbers.map((number) => (
+//         <ul key={Math.random()}>
+//           <li>{number}</li>
+//         </ul>
+//       ))}
+//     </main>
+//   );
+// };
+// export default App;
+
+
+// Example 2
+// const App = () => {
+//   const usersInfo = [
+//     {
+//       username: "HuXn",
+//       email: "test@gmail.com",
+//       location: "USA",
+//     },
+//     {
+//       username: "John",
+//       email: "jd@gmail.com",
+//       location: "Arab",
+//     },
+//     {
+//       username: "Alex",
+//       email: "alexmersion@gmail.com",
+//       location: "India",
+//     },
+//   ];
+
+//   return (
+//     <section>
+//       {usersInfo.map((user) => (
+//         <ul key={Math.random()}>
+//           <li>{user.username}</li>
+//           <li>{user.email}</li>
+//           <li>{user.location}</li>
+//         </ul>
+//       ))}
+//     </section>
+//   );
+// };
+
+// export default App;
+
+
+// Example 3
+// const App = () => {
+//   const myName = "Cherifatou KONDO";
+//   const multiply = (a, b) => a + b;
+//   const division = (a, b) => a / b;
+//   const specialClass = "simple-class";
+
+//   return (
+//     <section>
+//       {/* Rendering Variable Value */}
+//       <h1>{myName}</h1>
+//       {/* Rendering Expression */}
+//       <p>2 + 2 = {2 + 2}</p>
+//       {/* Rendering Array */}
+//       <p>My Friends List: {["Kabore-", "Zongo-", "Ky-", "Ouedraogo"]}</p>
+//       {/* Rendering Function Value */}
+//       <p>2 * 2 = {multiply(2, 2)}</p>
+//       {/* Rendering Function Value */}
+//       <p>2 / 2 = {division(2, 2)}</p>
+//       {/* Rendering Class */}
+//       <p className={specialClass}>This is special class</p>
+//     </section>
+//   );
+// };
+
+// export default App;
+// import Shopping from "../component/Shopping";
+
+// const App = () => {
+//   return (
+//     <section>
+//       <Shopping
+//         items={["robe", "jupe", "pantalon", "chaussure"]
+          
+//         }
+//       />
+//     </section>
+//   );
+// };
+
+// export default App;
+// const User = (props) => {
+//   return (
+//     <section>
+//       <img src={props.img} alt={props.name} width={200} />
+//       <h1>Name: {props.name}</h1>
+//       <h2>Age: {props.age +2}</h2>
+//       <h3>Is married: {props.isMarried ? "Marie" : "Celibataire "}</h3>
+//       <h4>Hobbies: {props.hobbies} </h4>
+//       <h4>Nationalité:{props.Nationalité}</h4>
+//     </section>
+//   );
+// };   
+
+// const App = () => {
+//   return (
+//     <User
+//       img="https://avatars.githubusercontent.com/u/85052811?v=4"
+//       name="Cherifatou Espérance"
+//       age={19}
+//       isMarried={true}
+//       hobbies={["Coding" , "Reading" , "Sleeping"]}
+//       Nationalité={"Italien"}
+//     />
+
+//   );
+// };
+
+// export default App;
+// const App = () => {
+//   return (
+//     <User
+//       img="https://avatars.githubusercontent.com/u/85052811?v=4"
+//       name="HuXn WebDev"
+//       age={18}
+//       isMarried={false}
+//       hobbies={["Coding", "Reading", "Sleeping"]}
+//       nationalité="Italien"
+//     />
+//   );
+// };
+
+// const User = ({ img, name, age, isMarried, hobbies ,nationalité}) => {
+//   return (
+//     <section>
+//       <img src={img} alt={name} width={200} />
+//       <h1>Name: {name}</h1>
+//       <h2>Age: {age}</h2>
+//       <h3>Is married: {isMarried}</h3>
+//       <h4>Hobbies: {hobbies} </h4>
+//       <h4>nationalité:{nationalité}</h4>
+//     </section>
+//   );
+// };
+
+// export default App;
+// const ValidPassword = () => <h1>Valid Password</h1>;
+// const InvalidPassword = () => <h1>Invalid Password</h1>;
+
+// const Password = ({ isValid }) =>
+//   isValid ? <ValidPassword /> : <InvalidPassword />;
+
+// const App = () => {
+//   return (
+//     <section>
+//       <Password isValid={true} />
+//     </section>
+//   );
+// };
+
+// export default App;
+// const App = () => {
+//   return (
+//     <section>
+//       <h1 style={{ color: "white", backgroundColor: "teal", padding: "2rem" }}>
+//         Inline Style
+//       </h1>
+//     </section>
+//   );
+// };
+
+//  export default App;
+// const App = () => {
+//   // const handleClick = () => console.log("You Clicked Me");
+//   const handleClick = () => alert("Bonjour 2ie")
+//   return <button onClick={handleClick}>Click</button>;
+// };
+
+// export default App;
+// const Move = () => {
+//   function moveHandler() {
+//     alert("Mouse Move Event Fired");
+//     console.log("Mouse Move Event Fired");
+//   }
+
+//   return (
+//     <p onMouseOver={moveHandler}>
+//       Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+//       voluptatibus libero, eius odit modi doloremque quos magni tempora. Debitis
+//       laborum exercitationem perferendis. Veritatis fuga, quod quasi accusamus
+//       eveniet voluptates suscipit.
+//     </p>
+//   );
+// };
+
+// const App = () => {
+//   // return <Button />;
+//   // return <Copy />;
+//   return <Move />;
+// };
+
+// export default App;
+import { useState } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <h1>{count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </div>
   );
-}
+};
+
+const App = () => {
+  return <Counter />;
+};
+
+export default App;
